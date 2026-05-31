@@ -3,7 +3,6 @@
 import Footer from "@/components/layout/footer/Footer";
 import Header from "@/components/layout/header/Header";
 import BackToTop from "@/components/shared/others/BackToTop";
-import HeaderSpace from "@/components/shared/others/HeaderSpace";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
 import Link from "next/link";
 import { useState } from "react";
@@ -74,17 +73,15 @@ export default function News() {
 		<div>
 			<BackToTop />
 			<Header />
-			<Header isStickyHeader={true} />
-			<div id="smooth-wrapper">
+						<div id="smooth-wrapper">
 				<div id="smooth-content">
 					<main>
-						<HeaderSpace />
-
+						
 						{/* Hero Page Title */}
 						<section
 							style={{
 								position: "relative",
-								padding: "140px 0 100px 0",
+								minHeight: "100vh", display: "flex", alignItems: "center", padding: "100px 0",
 								backgroundImage: "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop')",
 								backgroundSize: "cover",
 								backgroundPosition: "center",
@@ -340,3 +337,4 @@ export default function News() {
 		</div>
 	);
 }
+
