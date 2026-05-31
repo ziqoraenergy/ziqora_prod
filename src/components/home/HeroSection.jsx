@@ -68,23 +68,7 @@ const HeroSection = () => {
 				<div className="row align-items-center">
 					<div className="col-lg-8">
 						<div className="hero-content">
-							<span
-								style={{
-									color: "#10b981",
-									fontWeight: "700",
-									textTransform: "uppercase",
-									letterSpacing: "2px",
-									fontSize: "14px",
-									display: "inline-block",
-									marginBottom: "15px",
-									border: "1px solid rgba(16,185,129,0.3)",
-									padding: "6px 16px",
-									borderRadius: "30px",
-									background: "rgba(16,185,129,0.1)",
-								}}
-							>
-								PROJECT DEVELOPMENT STAGE
-							</span>
+
 							<h1
 								style={{
 									fontSize: "calc(2.5rem + 2vw)",
