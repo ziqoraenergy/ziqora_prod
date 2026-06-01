@@ -116,9 +116,9 @@ const WafersHeroSection = () => {
 						<div className="wow fadeInUp" data-wow-delay=".6s" style={{ color: "rgba(255, 255, 255, 0.6)", fontSize: "14px" }}>
 							<Link href="/" style={{ color: "#10b981", fontWeight: "600" }}>Home</Link>
 							<span style={{ margin: "0 10px" }}>/</span>
-							<span>Products</span>
+							<span>Technology</span>
 							<span style={{ margin: "0 10px" }}>/</span>
-							<span>Silicon Wafers</span>
+							<span>Wafer Technologies</span>
 						</div>
 					</div>
 				</div>
