@@ -84,9 +84,6 @@ const Footer = () => {
 									<li style={{ marginBottom: "12px" }}>
 										<Link href="/news" style={{ color: "rgba(255, 255, 255, 0.75)" }}>News & Insights</Link>
 									</li>
-									<li style={{ marginBottom: "12px" }}>
-										<Link href="/careers" style={{ color: "rgba(255, 255, 255, 0.75)" }}>Careers</Link>
-									</li>
 									<li>
 										<Link href="/contact" style={{ color: "rgba(255, 255, 255, 0.75)" }}>Contact</Link>
 									</li>

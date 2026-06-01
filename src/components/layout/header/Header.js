@@ -61,7 +61,6 @@ const Header = () => {
 									</ul>
 								</li>
 								<li><Link href="/news">News & Insights</Link></li>
-								<li><Link href="/careers">Careers</Link></li>
 								<li><Link href="/contact">Contact</Link></li>
 							</ul>
 						</nav>
