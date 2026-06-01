@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer/Footer";
 import Header from "@/components/layout/header/Header";
 import BackToTop from "@/components/shared/others/BackToTop";
 import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
+import WhyZiqora from "@/components/home/WhyZiqora";
 import Link from "next/link";
 
 export default function About() {
@@ -86,22 +87,8 @@ export default function About() {
 							<div className="container" style={{ position: "relative", zIndex: 2 }}>
 								<div className="row align-items-center">
 									<div className="col-lg-8 text-start">
-										<div className="hero-fade-in hero-delay-1" style={{ display: "inline-flex", alignItems: "center", gap: "10px", marginBottom: "20px" }}>
-											<span style={{ width: "30px", height: "2px", background: "#10b981" }}></span>
-											<span
-												style={{
-													color: "#10b981",
-													fontWeight: "700",
-													textTransform: "uppercase",
-													letterSpacing: "2px",
-													fontSize: "12px",
-												}}
-											>
-												PROJECT DEVELOPMENT STAGE
-											</span>
-										</div>
 										<h1
-											className="hero-fade-in hero-delay-2"
+											className="hero-fade-in hero-delay-1"
 											style={{
 												fontWeight: "900",
 												color: "#ffffff",
@@ -321,102 +308,7 @@ export default function About() {
 						</section>
 
 						{/* Why Ziqora Section */}
-						<section
-							id="why-ziqora"
-							style={{ padding: "100px 0", backgroundColor: "#ffffff" }}
-						>
-							<div className="container">
-								<div className="row justify-content-center text-center mb-5">
-									<div className="col-lg-8">
-										<span
-											style={{
-												color: "#10b981",
-												fontWeight: "600",
-												textTransform: "uppercase",
-												letterSpacing: "1.5px",
-												fontSize: "14px",
-												display: "block",
-												marginBottom: "10px",
-											}}
-										>
-											STRATEGIC ADVANTAGES
-										</span>
-										<h2 style={{ color: "#0a1931", fontWeight: "800", fontSize: "36px" }}>
-											Why Ziqora
-										</h2>
-										<p style={{ color: "#64748b" }}>
-											Designing the foundation for long-term manufacturing growth and security.
-										</p>
-									</div>
-								</div>
-
-								<div className="row justify-content-center">
-									<div className="col-lg-10">
-										<div className="row">
-											{[
-												{
-													icon: "fa-map-location-dot",
-													title: "Strategic Odisha Location",
-													desc: "Odisha offers robust infrastructure, excellent port connectivity for polysilicon imports, investor-friendly industrial policies, and reliable green power corridors.",
-												},
-												{
-													icon: "fa-house-chimney-window",
-													title: "Domestic Manufacturing Focus",
-													desc: "By focusing entirely on wafer and cell fabrication, we address the critical base layers of the solar value chain inside India, facilitating import substitution.",
-												},
-												{
-													icon: "fa-chart-line",
-													title: "Long-Term Industrial Vision",
-													desc: "Our plans incorporate expandable capacities (up to 5 GW) and Industry 4.0 standards, ensuring Ziqora remains competitive for decades to come.",
-												},
-												{
-													icon: "fa-rotate",
-													title: "Supply Chain Resilience",
-													desc: "Providing local module developers with a reliable, local supplier footprint to remove cargo shipment risks and custom clearances delay.",
-												},
-											].map((item, idx) => (
-												<div key={idx} className="col-md-6 mb-4">
-													<div
-														style={{
-															padding: "30px",
-															background: "#f8fafc",
-															border: "1px solid #e2e8f0",
-															borderRadius: "12px",
-															height: "100%",
-															transition: "all 0.3s ease",
-														}}
-														onMouseEnter={(e) => {
-															e.currentTarget.style.borderColor = "#10b981";
-															e.currentTarget.style.transform = "translateY(-3px)";
-														}}
-														onMouseLeave={(e) => {
-															e.currentTarget.style.borderColor = "#e2e8f0";
-															e.currentTarget.style.transform = "translateY(0)";
-														}}
-													>
-														<div
-															style={{
-																fontSize: "30px",
-																color: "#10b981",
-																marginBottom: "20px",
-															}}
-														>
-															<i className={`fa-solid ${item.icon}`}></i>
-														</div>
-														<h4 style={{ color: "#0a1931", fontWeight: "700", marginBottom: "12px", fontSize: "20px" }}>
-															{item.title}
-														</h4>
-														<p style={{ color: "#64748b", margin: 0, fontSize: "14px", lineHeight: "1.6" }}>
-															{item.desc}
-														</p>
-													</div>
-												</div>
-											))}
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
+						<WhyZiqora />
 					</main>
 					<Footer />
 				</div>
