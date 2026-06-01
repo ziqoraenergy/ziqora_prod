@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MobileNavbar from "./MobileNavbar";
+import Logo from "./Logo";
 
 const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 	const handleClick = () => {
@@ -22,9 +23,7 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 					<div className="hamburger_inner">
 						<div className="hamburger_top d-flex align-items-center justify-content-between">
 							<div className="hamburger_logo">
-								<Link href="/" className="mobile_logo">
-									<img src="/images/logos/logo-2.webp" alt="Logo" />
-								</Link>
+								<Logo headerType={2} isStickyHeader={false} />
 							</div>
 							<div className="hamburger_close">
 								<button className="hamburger_close_btn" onClick={handleClick}>
@@ -44,8 +43,8 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 								</div>
 								<div className="contact-item">
 									<span className="subtitle">Email</span>
-									<Link className="contact-link" href="mailto:info@bexon.com">
-										info@bexon.com
+									<Link className="contact-link" href="mailto:info@ziqora.com">
+										info@ziqora.com
 									</Link>
 								</div>
 								<div className="contact-item">

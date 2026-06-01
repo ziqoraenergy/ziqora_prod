@@ -41,11 +41,11 @@ const ProductsSlider = () => {
 				</SwiperSlide>
 				
 				{/* Custom Navigation Overlay */}
-				<button className="products-prev" style={{ position: "absolute", left: "30px", top: "50%", transform: "translateY(-50%)", zIndex: 10, background: "rgba(255,255,255,0.9)", border: "1px solid #e2e8f0", width: "50px", height: "50px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", boxShadow: "0 10px 20px rgba(10,25,49,0.1)", transition: "all 0.3s ease" }}>
+				<button className="products-prev d-none d-lg-flex" style={{ position: "absolute", left: "30px", top: "50%", transform: "translateY(-50%)", zIndex: 10, background: "rgba(255,255,255,0.9)", border: "1px solid #e2e8f0", width: "50px", height: "50px", borderRadius: "50%", alignItems: "center", justifyContent: "center", cursor: "pointer", boxShadow: "0 10px 20px rgba(10,25,49,0.1)", transition: "all 0.3s ease" }}>
 					<i className="fa-solid fa-chevron-left" style={{ color: "#0a1931", fontSize: "18px" }}></i>
 				</button>
 				
-				<button className="products-next" style={{ position: "absolute", right: "30px", top: "50%", transform: "translateY(-50%)", zIndex: 10, background: "rgba(255,255,255,0.9)", border: "1px solid #e2e8f0", width: "50px", height: "50px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", boxShadow: "0 10px 20px rgba(10,25,49,0.1)", transition: "all 0.3s ease" }}>
+				<button className="products-next d-none d-lg-flex" style={{ position: "absolute", right: "30px", top: "50%", transform: "translateY(-50%)", zIndex: 10, background: "rgba(255,255,255,0.9)", border: "1px solid #e2e8f0", width: "50px", height: "50px", borderRadius: "50%", alignItems: "center", justifyContent: "center", cursor: "pointer", boxShadow: "0 10px 20px rgba(10,25,49,0.1)", transition: "all 0.3s ease" }}>
 					<i className="fa-solid fa-chevron-right" style={{ color: "#0a1931", fontSize: "18px" }}></i>
 				</button>
 

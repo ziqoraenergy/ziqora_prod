@@ -87,11 +87,21 @@ const SiliconWafers = () => {
 							))}
 						</div>
 
+						{/* Static Image for Mobile Only */}
+						<div className="d-block d-lg-none mt-5 text-center position-relative" style={{ height: "300px", width: "100%" }}>
+							<Image 
+								src="/images/ziqora/wafers_on_white.png" 
+								alt="High-purity Silicon Wafers" 
+								fill
+								style={{ objectFit: "contain", objectPosition: "center", mixBlendMode: "multiply" }}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
 			
-			<div className="wow fadeInRight" data-wow-delay=".6s" style={{ position: "absolute", right: "-5%", top: "0", width: "55%", height: "100%", zIndex: 1, display: "flex", alignItems: "flex-start", paddingTop: "5%", justifyContent: "center" }}>
+			{/* Absolute Positioned Image for Desktop Only */}
+			<div className="wow fadeInRight d-none d-lg-flex" data-wow-delay=".6s" style={{ position: "absolute", right: "-5%", top: "0", width: "55%", height: "100%", zIndex: 1, alignItems: "flex-start", paddingTop: "5%", justifyContent: "center" }}>
 				<Image 
 					src="/images/ziqora/wafers_on_white.png" 
 					alt="High-purity Silicon Wafers" 

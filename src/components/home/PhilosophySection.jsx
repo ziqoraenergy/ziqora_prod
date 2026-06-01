@@ -37,6 +37,7 @@ const PhilosophySection = () => {
 			</div>
 
 			<div
+				className="ziqora-accordion-container"
 				style={{
 					display: "flex",
 					width: "100%",
@@ -49,6 +50,20 @@ const PhilosophySection = () => {
 			>
 				{/* Style tag for hover accordion transitions */}
 				<style>{`
+					.ziqora-accordion-container {
+						flex-direction: row;
+					}
+					@media (max-width: 991px) {
+						.ziqora-accordion-container {
+							flex-direction: column !important;
+							height: 800px !important;
+						}
+						.ziqora-column {
+							min-height: 150px;
+							border-right: none !important;
+							border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+						}
+					}
 					.ziqora-column {
 						flex: 1;
 						transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);

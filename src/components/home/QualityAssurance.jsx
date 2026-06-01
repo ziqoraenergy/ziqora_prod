@@ -95,14 +95,25 @@ const QualityAssurance = () => {
 							))}
 						</div>
 
+						{/* Static Image for Mobile Only */}
+						<div className="d-block d-lg-none mt-5 text-center position-relative" style={{ height: "300px", width: "100%" }}>
+							<Image 
+								src="/images/silicon_with_shadow.png" 
+								alt="Polysilicon" 
+								fill
+								style={{ objectFit: "contain", objectPosition: "center", mixBlendMode: "multiply" }}
+							/>
+						</div>
+
 					</div>
 				</div>
 			</div>
 			
-			<div className="wow fadeInRight" data-wow-delay=".6s" style={{ position: "absolute", right: "-5%", top: "0", width: "55%", height: "100%", zIndex: 1, display: "flex", alignItems: "flex-start", paddingTop: "5%", justifyContent: "center" }}>
+			{/* Absolute Positioned Image for Desktop Only */}
+			<div className="wow fadeInRight d-none d-lg-flex" data-wow-delay=".6s" style={{ position: "absolute", right: "-5%", top: "5%", width: "55%", height: "100%", zIndex: 1, alignItems: "center", justifyContent: "center" }}>
 				<Image 
 					src="/images/silicon_with_shadow.png" 
-					alt="High-purity crystalline silicon rock" 
+					alt="Polysilicon" 
 					fill
 					style={{ objectFit: "contain", objectPosition: "center top", mixBlendMode: "multiply", opacity: 0.95, zIndex: 1 }}
 				/>
