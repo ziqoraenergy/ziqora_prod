@@ -59,22 +59,6 @@ const Footer = () => {
 										Building the Foundation of India's Solar Future. Establishing 5 GW of wafer and solar cell capacity in Odisha, India.
 									</p>
 								</div>
-								<div
-									style={{
-										display: "inline-block",
-										border: "1px solid rgba(16,185,129,0.3)",
-										background: "rgba(16,185,129,0.08)",
-										padding: "8px 16px",
-										borderRadius: "30px",
-										fontSize: "12px",
-										color: "#10b981",
-										fontWeight: "700",
-										textTransform: "uppercase",
-										letterSpacing: "1px",
-									}}
-								>
-									Project Development Stage
-								</div>
 							</div>
 						</div>
 
