@@ -40,7 +40,6 @@ const Header = () => {
 									<ul className="sub-menu">
 										<li><Link href="/about">Company Overview</Link></li>
 										<li><Link href="/about#vision">Vision & Mission</Link></li>
-										<li><Link href="/team">Leadership</Link></li>
 									</ul>
 								</li>
 								<li className="has-dropdown">
