@@ -7,11 +7,15 @@ const Footer = () => {
 
 	return (
 		<footer
-			className="tj-footer-section footer-1 section-gap-x"
+			className="tj-footer-section footer-1"
 			style={{
 				background: "#070f1e",
 				color: "#ffffff",
 				padding: "80px 0 40px 0",
+				margin: "0",
+				borderRadius: "0",
+				width: "100%",
+				maxWidth: "100%",
 				position: "relative",
 			}}
 		>
