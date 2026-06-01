@@ -29,7 +29,7 @@ const WhyZiqora = () => {
 	return (
 		<section
 			className="why-ziqora-section"
-			style={{ padding: "120px 0", backgroundColor: "#f8fafc", position: "relative", overflow: "hidden" }}
+			style={{ padding: "120px 0", minHeight: "100vh", display: "flex", alignItems: "center", backgroundColor: "#f8fafc", position: "relative", overflow: "hidden" }}
 		>
 			{/* Decorative background circle */}
 			<div style={{ position: "absolute", top: "-10%", right: "-5%", width: "500px", height: "500px", background: "radial-gradient(circle, rgba(16,185,129,0.05) 0%, transparent 70%)", borderRadius: "50%", zIndex: 0 }}></div>
@@ -37,7 +37,7 @@ const WhyZiqora = () => {
 			<div className="container" style={{ position: "relative", zIndex: 1 }}>
 				{/* Section Header */}
 				<div className="row justify-content-center mb-5 pb-3">
-					<div className="col-lg-8 text-center wow fadeInUp" data-wow-delay=".2s">
+					<div className="col-lg-8 text-center wow fadeInUp" data-wow-delay=".1s">
 						<span
 							style={{
 								color: "#10b981",

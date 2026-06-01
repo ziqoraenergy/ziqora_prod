@@ -3,28 +3,32 @@ import Link from "next/link";
 const SustainabilityPreview = () => {
 	return (
 		<section
-			className="sustainability-preview-section section-gap-x"
+			className="sustainability-preview-section"
 			style={{
-				padding: "100px 0",
+				padding: "0",
 				position: "relative",
-				background: "linear-gradient(rgba(10, 25, 49, 0.95), rgba(10, 25, 49, 0.95)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1200&auto=format&fit=crop')",
+				minHeight: "100vh",
+				display: "flex",
+				alignItems: "center",
+				background: "linear-gradient(rgba(10, 25, 49, 0.8), rgba(10, 25, 49, 0.85)), url('/images/ziqora/sustainability_solar_farm.png')",
 				backgroundSize: "cover",
 				backgroundPosition: "center",
+				backgroundAttachment: "fixed",
 				color: "#ffffff",
 			}}
 		>
 			<div className="container">
-				<div className="row align-items-center">
-					<div className="col-lg-6">
+				<div className="row justify-content-center text-center">
+					<div className="col-lg-8 wow fadeInUp" data-wow-delay=".2s">
 						<span
 							style={{
 								color: "#10b981",
-								fontWeight: "600",
+								fontWeight: "700",
 								textTransform: "uppercase",
-								letterSpacing: "1.5px",
+								letterSpacing: "2px",
 								fontSize: "14px",
 								display: "block",
-								marginBottom: "10px",
+								marginBottom: "15px",
 							}}
 						>
 							OUR COMMITMENT
@@ -33,18 +37,19 @@ const SustainabilityPreview = () => {
 							style={{
 								color: "#ffffff",
 								fontWeight: "800",
-								fontSize: "36px",
-								marginBottom: "20px",
+								fontSize: "48px",
+								marginBottom: "25px",
+								letterSpacing: "-1px"
 							}}
 						>
 							Commitment to a Green Future
 						</h2>
 						<p
 							style={{
-								color: "rgba(255, 255, 255, 0.8)",
-								fontSize: "16px",
-								lineHeight: "1.6",
-								marginBottom: "30px",
+								color: "rgba(255, 255, 255, 0.85)",
+								fontSize: "18px",
+								lineHeight: "1.8",
+								marginBottom: "40px",
 							}}
 						>
 							We are embedding sustainability at the heart of our project plan. From energy-efficient systems to water reclamation initiatives, Ziqora is committed to establishing low-emission manufacturing models for a cleaner planet.
@@ -55,29 +60,20 @@ const SustainabilityPreview = () => {
 								display: "inline-flex",
 								alignItems: "center",
 								gap: "10px",
-								color: "#10b981",
-								fontWeight: "700",
+								backgroundColor: "#10b981",
+								color: "#ffffff",
+								padding: "16px 36px",
+								borderRadius: "30px",
+								fontWeight: "600",
+								textDecoration: "none",
+								transition: "all 0.3s ease",
+								boxShadow: "0 10px 20px rgba(16, 185, 129, 0.2)",
 							}}
+							onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#0ea5e9"; e.currentTarget.style.transform = "translateY(-3px)"; }}
+							onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#10b981"; e.currentTarget.style.transform = "translateY(0)"; }}
 						>
 							Discover Our ESG Roadmap <i className="fa-solid fa-arrow-right"></i>
 						</Link>
-					</div>
-					<div className="col-lg-6 mt-5 mt-lg-0 text-center">
-						<div
-							style={{
-								position: "relative",
-								display: "inline-block",
-								borderRadius: "12px",
-								overflow: "hidden",
-								boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
-							}}
-						>
-							<img
-								src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=600&auto=format&fit=crop"
-								alt="Sustainability nature elements"
-								style={{ maxWidth: "100%", height: "auto", display: "block" }}
-							/>
-						</div>
 					</div>
 				</div>
 			</div>

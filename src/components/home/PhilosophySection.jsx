@@ -3,7 +3,11 @@ const PhilosophySection = () => {
 		<section
 			className="philosophy-section"
 			style={{
-				padding: "100px 0 0 0",
+				padding: "120px 0 0 0",
+				minHeight: "100vh",
+				display: "flex",
+				flexDirection: "column",
+				justifyContent: "space-between",
 				backgroundColor: "#0a1931",
 				color: "#ffffff",
 				position: "relative",
@@ -192,6 +196,30 @@ const PhilosophySection = () => {
 							<div className="ziqora-desc">{item.desc}</div>
 						</div>
 					))}
+				</div>
+			</div>
+
+			{/* Quick Stats Banner injected at the bottom of Philosophy Section */}
+			<div style={{ backgroundColor: "#0b1221", padding: "60px 0" }}>
+				<div className="container">
+					<div className="row text-center align-items-center">
+						<div className="col-md-3 col-6 mb-4 mb-md-0 wow fadeInUp" data-wow-delay=".1s">
+							<h2 style={{ color: "#10b981", fontSize: "40px", fontWeight: "800", marginBottom: "10px", letterSpacing: "-1px" }}>5 GW</h2>
+							<p style={{ color: "#94a3b8", fontSize: "12px", fontWeight: "600", textTransform: "uppercase", letterSpacing: "1px", margin: 0 }}>PLANNED WAFER CAPACITY</p>
+						</div>
+						<div className="col-md-3 col-6 mb-4 mb-md-0 wow fadeInUp" data-wow-delay=".2s">
+							<h2 style={{ color: "#10b981", fontSize: "40px", fontWeight: "800", marginBottom: "10px", letterSpacing: "-1px" }}>5 GW</h2>
+							<p style={{ color: "#94a3b8", fontSize: "12px", fontWeight: "600", textTransform: "uppercase", letterSpacing: "1px", margin: 0 }}>PLANNED SOLAR CELL CAPACITY</p>
+						</div>
+						<div className="col-md-3 col-6 mb-4 mb-md-0 wow fadeInUp" data-wow-delay=".3s">
+							<h2 style={{ color: "#10b981", fontSize: "40px", fontWeight: "800", marginBottom: "10px", letterSpacing: "-1px" }}>Odisha</h2>
+							<p style={{ color: "#94a3b8", fontSize: "12px", fontWeight: "600", textTransform: "uppercase", letterSpacing: "1px", margin: 0 }}>MANUFACTURING BASE</p>
+						</div>
+						<div className="col-md-3 col-6 mb-4 mb-md-0 wow fadeInUp" data-wow-delay=".4s">
+							<h2 style={{ color: "#10b981", fontSize: "40px", fontWeight: "800", marginBottom: "10px", letterSpacing: "-1px" }}>Domestic</h2>
+							<p style={{ color: "#94a3b8", fontSize: "12px", fontWeight: "600", textTransform: "uppercase", letterSpacing: "1px", margin: 0 }}>INDIA-FOCUSED SUPPLY CHAIN</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

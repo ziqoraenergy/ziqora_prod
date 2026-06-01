@@ -2,7 +2,15 @@ const EcosystemFlow = () => {
 	return (
 		<section
 			className="ecosystem-section"
-			style={{ padding: "100px 0", backgroundColor: "#f8fafc" }}
+			style={{ 
+				padding: "120px 0", 
+				minHeight: "100vh", 
+				display: "flex", 
+				alignItems: "center", 
+				background: "linear-gradient(rgba(248, 250, 252, 0.8), rgba(248, 250, 252, 0.9)), url('/images/ziqora/wafer.jpg')",
+				backgroundSize: "cover",
+				backgroundPosition: "center",
+			}}
 		>
 			<div className="container">
 				<div className="row justify-content-center text-center mb-5">

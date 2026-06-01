@@ -30,7 +30,7 @@ const ProductShowcase = () => {
 						className="col-lg-6 position-relative d-flex flex-column"
 						style={{
 							minHeight: "100vh",
-							backgroundImage: "url('/images/ziqora/wafers_on_white.png')",
+							backgroundImage: "url('/images/home/square_wafers.png')",
 							backgroundSize: "cover",
 							backgroundPosition: "center right",
 							borderRight: "1px solid rgba(255, 255, 255, 0.05)",

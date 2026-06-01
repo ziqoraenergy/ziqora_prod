@@ -4,7 +4,7 @@ const RecentNews = () => {
 	return (
 		<section
 			className="updates-section"
-			style={{ padding: "100px 0", backgroundColor: "#ffffff" }}
+			style={{ padding: "120px 0", minHeight: "100vh", display: "flex", alignItems: "center", backgroundColor: "#ffffff" }}
 		>
 			<div className="container">
 				<div className="row justify-content-between align-items-end mb-5">

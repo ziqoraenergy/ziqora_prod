@@ -7,6 +7,8 @@ import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
 
 // Home Components
 import HeroSection from "@/components/home/HeroSection";
+import WhatWeDo from "@/components/home/WhatWeDo";
+import ProblemSolution from "@/components/home/ProblemSolution";
 import WhyZiqora from "@/components/home/WhyZiqora";
 import StatsSection from "@/components/home/StatsSection";
 import PhilosophySection from "@/components/home/PhilosophySection";
@@ -26,10 +28,12 @@ export default function Home() {
 				<div id="smooth-content">
 					<main>
 						<HeroSection />
+						<WhatWeDo />
 						<ProductShowcase />
 						
+						{/* <ProblemSolution /> */}
 						<WhyZiqora />
-						<StatsSection />
+						{/* <StatsSection /> */}
 						<PhilosophySection />
 						<EcosystemFlow />
 						<SustainabilityPreview />
