@@ -68,7 +68,7 @@ const Header = () => {
 
 					{/* RIGHT: Actions */}
 					<div className="ziqora-header-right">
-						<Link href="/contact" className="ziqora-cta-btn d-none d-md-flex">
+						<Link href="/partner" className="ziqora-cta-btn d-none d-md-flex">
 							Partner With Us
 							<i className="fa-solid fa-arrow-right"></i>
 						</Link>

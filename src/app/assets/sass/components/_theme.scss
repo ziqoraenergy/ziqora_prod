@@ -59,6 +59,10 @@ START: Theme Default CSS
 .site-main {
 	position: relative;
 }
+html {
+	overflow-x: hidden;
+	width: 100%;
+}
 body {
 	font-family: var(--tj-ff-body);
 	font-size: var(--tj-fs-body);
@@ -66,6 +70,8 @@ body {
 	color: var(--tj-color-text-body);
 	background-color: var(--tj-color-grey-1);
 	line-height: 1.5;
+	overflow-x: hidden;
+	width: 100%;
 	&:has(.tj-offcanvas-area.opened, .hamburger-area.opened, .modal-open) {
 		overflow: hidden;
 	}
@@ -267,16 +273,19 @@ input[type="search"]::-webkit-search-results-decoration {
 
 * {
 	scrollbar-width: thin;
-	scrollbar-color: var(--tj-color-theme-primary) var(--tj-color-common-white);
+	scrollbar-color: var(--tj-color-theme-primary) var(--tj-color-theme-dark-2);
 }
 ::-webkit-scrollbar {
-	height: 4px;
-	width: 6px;
+	height: 6px;
+	width: 8px;
+	background-color: var(--tj-color-theme-dark-2);
+}
+::-webkit-scrollbar-track {
+	background: var(--tj-color-theme-dark-2);
 }
 ::-webkit-scrollbar-thumb {
 	background: var(--tj-color-theme-primary);
-	-webkit-border-radius: 1ex;
-	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.75);
+	border-radius: 4px;
 }
 ::-webkit-scrollbar-corner {
 	background: transparent;
