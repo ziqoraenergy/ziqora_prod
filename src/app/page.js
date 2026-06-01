@@ -12,6 +12,7 @@ import StatsSection from "@/components/home/StatsSection";
 import PhilosophySection from "@/components/home/PhilosophySection";
 import EcosystemFlow from "@/components/home/EcosystemFlow";
 import ProductsSlider from "@/components/home/ProductsSlider";
+import ProductShowcase from "@/components/home/ProductShowcase";
 import SustainabilityPreview from "@/components/home/SustainabilityPreview";
 import RecentNews from "@/components/home/RecentNews";
 
@@ -25,7 +26,8 @@ export default function Home() {
 				<div id="smooth-content">
 					<main>
 						<HeroSection />
-						<ProductsSlider />
+						<ProductShowcase />
+						
 						<WhyZiqora />
 						<StatsSection />
 						<PhilosophySection />

@@ -22,37 +22,7 @@ const Footer = () => {
 						<div className="col-xl-4 col-lg-4 col-md-6 mb-5 mb-lg-0">
 							<div className="footer-widget">
 								<div className="footer-logo" style={{ display: "inline-flex", alignItems: "center", gap: "10px", marginBottom: "25px" }}>
-									{/* Sleek SVG solar wafer / sun icon */}
-									<svg
-										width="35"
-										height="35"
-										viewBox="0 0 100 100"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<rect x="5" y="5" width="90" height="90" rx="10" stroke="#ffffff" strokeWidth="4" />
-										<line x1="50" y1="5" x2="50" y2="95" stroke="#ffffff" strokeWidth="4" />
-										<line x1="5" y1="50" x2="95" y2="50" stroke="#ffffff" strokeWidth="4" />
-										<circle cx="50" cy="50" r="22" fill={greenAccent} />
-										<circle cx="50" cy="50" r="14" fill="#ffffff" />
-										<circle cx="50" cy="50" r="6" fill="#070f1e" />
-										<rect x="20" y="20" width="10" height="10" rx="2" fill="#ffffff" />
-										<rect x="70" y="20" width="10" height="10" rx="2" fill="#ffffff" />
-										<rect x="20" y="70" width="10" height="10" rx="2" fill="#ffffff" />
-										<rect x="70" y="70" width="10" height="10" rx="2" fill="#ffffff" />
-									</svg>
-									<span
-										style={{
-											fontFamily: "var(--tj-ff-heading), 'Mona Sans', sans-serif",
-											fontSize: "22px",
-											fontWeight: "900",
-											letterSpacing: "3px",
-											color: "#ffffff",
-											textTransform: "uppercase",
-										}}
-									>
-										Ziqora<span style={{ color: greenAccent }}>.</span>
-									</span>
+									<img src="/images/logos/logo-green.png" alt="Ziqora Logo" style={{ height: "45px", width: "auto" }} />
 								</div>
 								<div className="footer-text" style={{ marginBottom: "25px" }}>
 									<p style={{ color: "rgba(255, 255, 255, 0.75)", lineHeight: "1.6" }}>
