@@ -59,6 +59,11 @@
 				"path": "/technology#ecosystem"
 			},
 			{
+				"id": 5,
+				"name": "Wafer Technologies",
+				"path": "/technology/wafers"
+			},
+			{
 				"id": 2,
 				"name": "High-Efficiency Cells",
 				"path": "/technology/cells"

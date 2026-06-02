@@ -75,7 +75,7 @@ const ProductShowcase = () => {
 							</p>
 							<div>
 								<Link
-									href="/products/wafers"
+									href="/technology/wafers"
 									style={{
 										background: "#10b981", // Green color matching the theme
 										color: "#fff",
@@ -154,7 +154,7 @@ const ProductShowcase = () => {
 							</p>
 							<div>
 								<Link
-									href="/products/cells"
+									href="/technology/cells"
 									style={{
 										background: "#10b981", // Green color matching the theme
 										color: "#fff",
