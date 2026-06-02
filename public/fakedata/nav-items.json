@@ -59,6 +59,11 @@
 				"path": "/technology#ecosystem"
 			},
 			{
+				"id": 6,
+				"name": "Polysilicon Innovations",
+				"path": "/technology/polysilicon"
+			},
+			{
 				"id": 5,
 				"name": "Wafer Technologies",
 				"path": "/technology/wafers"

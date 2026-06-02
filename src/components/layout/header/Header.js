@@ -46,8 +46,8 @@ const Header = () => {
 									<Link href="/technology">Technology</Link>
 									<ul className="sub-menu">
 										<li><Link href="/technology">Silicon Technologies</Link></li>
-										<li><Link href="/technology#polysilicon">Polysilicon</Link></li>
-										<li><Link href="/technology#ingot">Ingot Manufacturing</Link></li>
+										<li><Link href="/technology/polysilicon">Polysilicon</Link></li>
+										<li><Link href="/technology/ingot">Ingot Manufacturing</Link></li>
 										<li><Link href="/technology/wafers">Wafer Technologies</Link></li>
 										<li><Link href="/technology/cells">Solar Cell Technologies</Link></li>
 									</ul>

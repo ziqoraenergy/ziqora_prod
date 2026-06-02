@@ -52,8 +52,8 @@ const RecentNews = () => {
 						>
 							Industry Insights
 						</span>
-						<h2 style={{ color: "#ffffff", fontWeight: "800", fontSize: "42px", margin: 0, letterSpacing: "-1px", fontFamily: "'Inter', sans-serif" }}>
-							News & <span style={{ color: "#10b981" }}>Policies</span>
+						<h2 style={{ color: "#0f172a", fontWeight: "800", fontSize: "42px", margin: 0, letterSpacing: "-1px", fontFamily: "'Inter', sans-serif" }}>
+							News & <span style={{ color: "#10b981" }}>Insights</span>
 						</h2>
 					</div>
 					<div className="col-md-4 text-md-end mt-4 mt-md-0">
@@ -61,16 +61,16 @@ const RecentNews = () => {
 							href="/news"
 							className="view-all-btn"
 							style={{
-								color: "#ffffff",
+								color: "#0f172a",
 								fontWeight: "600",
 								textDecoration: "none",
 								display: "inline-flex",
 								alignItems: "center",
 								gap: "8px",
 								padding: "12px 24px",
-								background: "rgba(255,255,255,0.05)",
+								background: "rgba(15, 23, 42, 0.05)",
 								borderRadius: "30px",
-								border: "1px solid rgba(255,255,255,0.1)",
+								border: "1px solid rgba(15, 23, 42, 0.1)",
 								transition: "all 0.3s ease"
 							}}
 						>
@@ -89,10 +89,28 @@ const RecentNews = () => {
 			</div>
 
 			<style>{`
-				.view-all-btn:hover {
-					background: #10b981 !important;
-					border-color: #10b981 !important;
-					transform: translateY(-2px);
+				@media (hover: hover) {
+					.view-all-btn:hover {
+						background: #10b981 !important;
+						border-color: #10b981 !important;
+						color: #ffffff !important;
+						transform: translateY(-2px);
+					}
+					.news-card-wrapper:hover {
+						transform: translateY(-10px);
+						box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+						border-color: rgba(16, 185, 129, 0.3);
+					}
+					.news-card-wrapper:hover .news-img {
+						transform: scale(1.08);
+					}
+					.news-card-wrapper:hover .news-title {
+						color: #10b981;
+					}
+					.news-card-wrapper:hover .read-more-link {
+						color: #10b981;
+						gap: 12px;
+					}
 				}
 				.news-card-wrapper {
 					height: 100%;
@@ -103,11 +121,6 @@ const RecentNews = () => {
 					transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 					display: flex;
 					flex-direction: column;
-				}
-				.news-card-wrapper:hover {
-					transform: translateY(-10px);
-					box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-					border-color: rgba(16, 185, 129, 0.3);
 				}
 				.news-img-container {
 					width: 100%;
@@ -120,9 +133,6 @@ const RecentNews = () => {
 					height: 100%;
 					object-fit: cover;
 					transition: transform 0.6s ease;
-				}
-				.news-card-wrapper:hover .news-img {
-					transform: scale(1.08);
 				}
 				.news-category-badge {
 					position: absolute;
@@ -160,9 +170,6 @@ const RecentNews = () => {
 					margin-bottom: 15px;
 					transition: color 0.3s;
 				}
-				.news-card-wrapper:hover .news-title {
-					color: #10b981;
-				}
 				.news-desc {
 					color: rgba(255,255,255,0.6);
 					font-size: 14.5px;
@@ -179,10 +186,6 @@ const RecentNews = () => {
 					align-items: center;
 					gap: 8px;
 					transition: all 0.3s;
-				}
-				.news-card-wrapper:hover .read-more-link {
-					color: #10b981;
-					gap: 12px;
 				}
 			`}</style>
 		</section>

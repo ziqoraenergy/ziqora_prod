@@ -161,7 +161,7 @@ const Footer = () => {
 							</div>
 							<div className="copyright-text" style={{ marginLeft: "20px" }}>
 								<p style={{ color: "rgba(255, 255, 255, 0.5)", fontSize: "13px", margin: 0 }}>
-									&copy; {new Date().getFullYear()} Ziqora Solar. All rights reserved.
+									&copy; {new Date().getFullYear()} Ziqora Energy. All rights reserved.
 								</p>
 							</div>
 						</div>
