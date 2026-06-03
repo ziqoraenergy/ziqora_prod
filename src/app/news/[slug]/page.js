@@ -66,6 +66,25 @@ export default function ArticlePage({ params }) {
 		);
 	}
 
+	const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+	const shareTitle = article.title;
+
+	const handleShareLinkedIn = () => {
+		window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(shareTitle)}`, '_blank');
+	};
+
+	const handleShareTwitter = () => {
+		window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`, '_blank');
+	};
+
+	const handleShareEmail = () => {
+		window.location.href = `mailto:?subject=${encodeURIComponent(shareTitle)}&body=${encodeURIComponent(shareUrl)}`;
+	};
+
+	const handlePrint = () => {
+		window.print();
+	};
+
 	return (
 		<div>
 			<BackToTop />
@@ -121,16 +140,16 @@ export default function ArticlePage({ params }) {
 										</div>
 									</div>
 									<div style={{ display: "flex", gap: "15px", marginTop: "15px" }}>
-										<button style={{ width: "36px", height: "36px", background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#475569", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.3s" }} className="hover-bg-dark hover-text-white">
+										<button onClick={handleShareLinkedIn} style={{ width: "36px", height: "36px", background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#475569", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.3s" }} className="hover-bg-dark hover-text-white">
 											<i className="fa-brands fa-linkedin-in"></i>
 										</button>
-										<button style={{ width: "36px", height: "36px", background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#475569", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.3s" }} className="hover-bg-dark hover-text-white">
+										<button onClick={handleShareTwitter} style={{ width: "36px", height: "36px", background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#475569", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.3s" }} className="hover-bg-dark hover-text-white">
 											<i className="fa-brands fa-x-twitter"></i>
 										</button>
-										<button style={{ width: "36px", height: "36px", background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#475569", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.3s" }} className="hover-bg-dark hover-text-white">
+										<button onClick={handleShareEmail} style={{ width: "36px", height: "36px", background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#475569", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.3s" }} className="hover-bg-dark hover-text-white">
 											<i className="fa-solid fa-envelope"></i>
 										</button>
-										<button style={{ width: "36px", height: "36px", background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#475569", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.3s" }} className="hover-bg-dark hover-text-white">
+										<button onClick={handlePrint} style={{ width: "36px", height: "36px", background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#475569", display: "flex", alignItems: "center", justifyContent: "center", transition: "all 0.3s" }} className="hover-bg-dark hover-text-white">
 											<i className="fa-solid fa-print"></i>
 										</button>
 									</div>
