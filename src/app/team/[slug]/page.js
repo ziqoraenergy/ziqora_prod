@@ -10,10 +10,26 @@ import getTeamMembers from "@/libs/getTeamMembers";
 import { notFound } from "next/navigation";
 const items = getTeamMembers();
 
-export default async function TeamDetails({ params }) {
-	const { id } = await params;
+export async function generateMetadata({ params }) {
+	const { slug } = await params;
+	const isExistItem = items?.find(({ id }) => id === parseInt(slug));
+	
+	if (!isExistItem) {
+		return {
+			title: "Team Member Not Found",
+		};
+	}
+	
+	return {
+		title: isExistItem.name || "Team Member",
+		description: isExistItem.designation || "Ziqora Team Member",
+	};
+}
 
-	const isExistItem = items?.find(({ id: id1 }) => id1 === parseInt(id));
+export default async function TeamDetails({ params }) {
+	const { slug } = await params;
+
+	const isExistItem = items?.find(({ id }) => id === parseInt(slug));
 	if (!isExistItem) {
 		notFound();
 	}
@@ -27,7 +43,7 @@ export default async function TeamDetails({ params }) {
 					<main>
 						<HeaderSpace />
 						<HeroInner title={"Team details"} text={"Team details"} />
-						<TeamDetails1 currentItemId={parseInt(id)} />
+						<TeamDetails1 currentItemId={parseInt(slug)} />
 						<Cta />
 					</main>
 					<Footer />
@@ -39,5 +55,5 @@ export default async function TeamDetails({ params }) {
 	);
 }
 export async function generateStaticParams() {
-	return items?.map(({ id }) => ({ id: id.toString() }));
+	return items?.map(({ id }) => ({ slug: id.toString() }));
 }

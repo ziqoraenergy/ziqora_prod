@@ -32,8 +32,27 @@ const headingFont = Mona_Sans({
 });
 
 export const metadata = {
-	title: "Ziqora - Wafer and Solar Cell Manufacturing Company",
-	description: "Ziqora - Wafer and Solar Cell Manufacturing Company",
+	title: {
+		default: "Ziqora - Powering India's Solar Manufacturing Future",
+		template: "%s | Ziqora"
+	},
+	description: "Ziqora is establishing 5 GW of wafer and solar cell capacity in Odisha, India, building the foundation of India's solar future.",
+	keywords: ["Solar", "Wafer", "Solar Cell", "Manufacturing", "Renewable Energy", "India", "Ziqora"],
+	openGraph: {
+		title: "Ziqora - Powering India's Solar Manufacturing Future",
+		description: "Ziqora is establishing 5 GW of wafer and solar cell capacity in Odisha, India.",
+		url: "https://ziqora.energy",
+		siteName: "Ziqora Energy",
+		images: [
+			{
+				url: "/images/og-image.jpg",
+				width: 1200,
+				height: 630,
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
 	icons: {
 		icon: [
 			{ url: '/images/favicon_io/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -44,7 +63,6 @@ export const metadata = {
 	},
 	manifest: '/images/favicon_io/site.webmanifest',
 };
-
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" data-scroll-behavior="smooth" dir="ltr">

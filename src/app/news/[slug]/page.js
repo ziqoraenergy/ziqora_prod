@@ -68,7 +68,6 @@ export default function ArticlePage({ params }) {
 
 	return (
 		<div>
-			<title>{article.title} | Ziqora Newsroom</title>
 			<BackToTop />
 			<Header />
 			<div id="smooth-wrapper" style={{ overflowX: "hidden", backgroundColor: "#ffffff" }}>
