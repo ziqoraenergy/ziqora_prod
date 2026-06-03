@@ -17,7 +17,7 @@ const Logo = ({ headerType, isStickyHeader }) => {
 	return (
 		<div className="site_logo" style={{ display: "inline-flex", alignItems: "center" }}>
 			<Link className="logo" href="/" style={{ display: "inline-flex", alignItems: "center" }}>
-				<img src="/images/logos/ziqora-logo-final.png" alt="Ziqora Logo" style={{ height: "45px", width: "auto" }} />
+				<img src="/images/logos/ziqora-logo-white.png" alt="Ziqora Logo" style={{ height: "45px", width: "auto" }} />
 			</Link>
 		</div>
 	);

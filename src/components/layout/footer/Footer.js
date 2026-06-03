@@ -28,7 +28,7 @@ const Footer = () => {
 						<div className="col-xl-4 col-lg-4 col-md-6 mb-5 mb-lg-0">
 							<div className="footer-widget">
 								<div className="footer-logo" style={{ display: "inline-flex", alignItems: "center", gap: "10px", marginBottom: "25px" }}>
-									<img src="/images/logos/ziqora-logo-final.png" alt="Ziqora Logo" style={{ height: "45px", width: "auto" }} />
+									<img src="/images/logos/ziqora-logo-white.png" alt="Ziqora Logo" style={{ height: "45px", width: "auto" }} />
 								</div>
 								<div className="footer-text" style={{ marginBottom: "25px" }}>
 									<p style={{ color: "rgba(255, 255, 255, 0.75)", lineHeight: "1.6" }}>
