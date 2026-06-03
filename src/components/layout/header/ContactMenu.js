@@ -33,9 +33,7 @@ const ContactMenu = ({ isContactOpen, setIsContactOpen }) => {
 						</div>
 						<div className="offcanvas-text">
 							<p>
-								Developing personalize our customer journeys to increase
-								satisfaction & loyalty of our expansion recognized by industry
-								leaders.
+								Pioneering the future of clean energy with a 5 GW state-of-the-art solar wafer and cell production hub in Odisha, India.
 							</p>
 						</div>
 						<div className="hamburger-search-area">
@@ -59,20 +57,20 @@ const ContactMenu = ({ isContactOpen, setIsContactOpen }) => {
 							<div className="contact-info">
 								<div className="contact-item">
 									<span className="subtitle">Phone</span>
-									<Link className="contact-link" href="tel:10095447818">
-										+1 (009) 544-7818
+									<Link className="contact-link" href="tel:+916743513070">
+										+91 674 351 3070
 									</Link>
 								</div>
 								<div className="contact-item">
 									<span className="subtitle">Email</span>
-									<Link className="contact-link" href="mailto:info@ziqora.com">
-										info@ziqora.com
+									<Link className="contact-link" href="mailto:info@ziqora.energy">
+										info@ziqora.energy
 									</Link>
 								</div>
 								<div className="contact-item">
 									<span className="subtitle">Location</span>
 									<span className="contact-link">
-										993 Renner Burg, West Rond, MT 94251-030
+										Bhubaneswar, Odisha, India
 									</span>
 								</div>
 							</div>

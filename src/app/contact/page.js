@@ -151,8 +151,8 @@ export default function Contact() {
 															<a href="tel:+916743513070" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "15px", display: "flex", alignItems: "center", gap: "10px", transition: "color 0.3s" }} className="hover-green">
 																<i className="fa-solid fa-phone" style={{ fontSize: "13px" }}></i> +91 674 351 3070
 															</a>
-															<a href="mailto:silicon@ziqora.com" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "15px", display: "flex", alignItems: "center", gap: "10px", transition: "color 0.3s" }} className="hover-green">
-																<i className="fa-solid fa-envelope" style={{ fontSize: "13px" }}></i> silicon@ziqora.com
+															<a href="mailto:office@ziqora.energy" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "15px", display: "flex", alignItems: "center", gap: "10px", transition: "color 0.3s" }} className="hover-green">
+																<i className="fa-solid fa-envelope" style={{ fontSize: "13px" }}></i> office@ziqora.energy
 															</a>
 														</div>
 													</div>
@@ -173,8 +173,8 @@ export default function Contact() {
 															<a href="tel:+916743513071" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "15px", display: "flex", alignItems: "center", gap: "10px", transition: "color 0.3s" }} className="hover-green">
 																<i className="fa-solid fa-phone" style={{ fontSize: "13px" }}></i> +91 674 351 3071
 															</a>
-															<a href="mailto:cells@ziqora.com" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "15px", display: "flex", alignItems: "center", gap: "10px", transition: "color 0.3s" }} className="hover-green">
-																<i className="fa-solid fa-envelope" style={{ fontSize: "13px" }}></i> cells@ziqora.com
+															<a href="mailto:info@ziqora.energy" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none", fontSize: "15px", display: "flex", alignItems: "center", gap: "10px", transition: "color 0.3s" }} className="hover-green">
+																<i className="fa-solid fa-envelope" style={{ fontSize: "13px" }}></i> info@ziqora.energy
 															</a>
 														</div>
 													</div>

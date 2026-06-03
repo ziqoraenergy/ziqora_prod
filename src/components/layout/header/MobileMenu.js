@@ -37,20 +37,20 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 							<div className="contact-info">
 								<div className="contact-item">
 									<span className="subtitle">Phone</span>
-									<Link className="contact-link" href="tel:8089091313">
-										808-909-1313
+									<Link className="contact-link" href="tel:+916743513070">
+										+91 674 351 3070
 									</Link>
 								</div>
 								<div className="contact-item">
 									<span className="subtitle">Email</span>
-									<Link className="contact-link" href="mailto:info@ziqora.com">
-										info@ziqora.com
+									<Link className="contact-link" href="mailto:info@ziqora.energy">
+										info@ziqora.energy
 									</Link>
 								</div>
 								<div className="contact-item">
 									<span className="subtitle">Location</span>
 									<span className="contact-link">
-										993 Renner Burg, West Rond, MT 94251-030
+										Bhubaneswar, Odisha, India
 									</span>
 								</div>
 							</div>

@@ -22,7 +22,7 @@ export default function About() {
 							style={{
 								position: "relative",
 								minHeight: "100vh", display: "flex", alignItems: "center", padding: "100px 0",
-								backgroundImage: "url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop')",
+								backgroundImage: "url('/images/about-hero.png')",
 								backgroundSize: "cover",
 								backgroundPosition: "center",
 								color: "#ffffff",
@@ -144,7 +144,7 @@ export default function About() {
 														marginBottom: "15px",
 													}}
 												>
-													Strategic Direction
+													Our Philosophy
 												</span>
 												<h2
 													style={{
@@ -155,10 +155,10 @@ export default function About() {
 														marginBottom: "20px",
 													}}
 												>
-													Corporate Philosophy & Mandate
+													Building for the Long Term
 												</h2>
 												<p style={{ color: "#64748b", fontSize: "15px", lineHeight: "1.6", margin: 0 }}>
-													As an industrial entity in development, Ziqora is guided by long-term planning, operational rigour, and self-reliance principles.
+													At Ziqora, we believe in long-term planning, operational excellence, and self-reliance. We are building the infrastructure needed to power tomorrow's energy needs.
 												</p>
 											</div>
 											<div className="col-lg-8" style={{ paddingLeft: "40px" }}>
@@ -198,10 +198,10 @@ export default function About() {
 																	marginBottom: "15px",
 																}}
 															>
-																Industrial Self-Reliance
+																A Self-Reliant India
 															</h3>
 															<p style={{ color: "#334155", fontSize: "16px", lineHeight: "1.7", margin: 0 }}>
-																To establish a foundational pillar for India's clean energy independence, securing the solar supply chain by building high-efficiency, vertically integrated domestic wafer and cell manufacturing capacity.
+																To secure India's clean energy future by building a robust, domestic supply chain for high-efficiency solar wafers and cells.
 															</p>
 														</div>
 													</div>
@@ -237,10 +237,10 @@ export default function About() {
 																	marginBottom: "15px",
 																}}
 															>
-																Executing 5 GW Capabilities
+																Delivering 5 GW Capacity
 															</h3>
 															<p style={{ color: "#334155", fontSize: "16px", lineHeight: "1.7", margin: 0 }}>
-																To deploy state-of-the-art production infrastructures in Odisha, India, introducing Industry 4.0 automation and high-throughput technological standards to supply domestic module manufacturers with reliable, world-class wafers and cells.
+																To build a state-of-the-art 5 GW manufacturing facility in Odisha. We are bringing advanced automation and world-class technology to supply reliable, high-quality solar components to domestic module manufacturers.
 															</p>
 														</div>
 													</div>
@@ -279,10 +279,10 @@ export default function About() {
 													Our Story
 												</h2>
 												<p style={{ color: "#334155", fontSize: "16px", lineHeight: "1.8", marginBottom: "20px" }}>
-													India has set ambitious targets to expand solar generation to secure its clean energy future. However, a significant gap remains: the domestic industry depends heavily on imported solar components—especially wafers and solar cells. This vulnerability exposes local projects to supply chain bottlenecks, tariffs, and geopolitical turbulence.
+													India is moving fast towards its clean energy goals, but the local solar industry still relies heavily on imported parts, especially wafers and cells. This dependency makes our projects vulnerable to supply chain issues and global market shifts.
 												</p>
 												<p style={{ color: "#334155", fontSize: "16px", lineHeight: "1.8", margin: 0 }}>
-													Recognizing this critical bottleneck, **Ziqora** was conceived. Our founders envisioned a state-of-the-art domestic ecosystem that starts from advanced wafers and extends to high-efficiency cells, helping domestic module manufacturers protect their timelines and build a self-reliant energy ecosystem.
+													That's why we started <strong>Ziqora</strong>. We are building a modern, domestic manufacturing ecosystem right here in India. By producing advanced wafers and high-efficiency cells locally, we aim to support module manufacturers, reduce delays, and help build a truly self-reliant energy sector.
 												</p>
 											</div>
 											<div className="col-lg-6 text-center">

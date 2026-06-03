@@ -137,3 +137,9 @@
 @forward "./assets/sass/ecommerce/woo-product";
 @forward "./assets/sass/ecommerce/woo-details";
 @forward "./assets/sass/ecommerce/woo-wishlist";
+
+.hover-white:hover { color: #ffffff !important; }
+.hover-bg-green:hover { background: #10b981 !important; }
+.hover-text-white:hover { color: #ffffff !important; }
+.article-content p { margin-bottom: 24px; }
+.article-content h2, .article-content h3 { color: #0f172a; font-weight: 800; margin-top: 40px; margin-bottom: 20px; }

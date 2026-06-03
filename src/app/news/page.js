@@ -7,57 +7,7 @@ import ClientWrapper from "@/components/shared/wrappers/ClientWrapper";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-const newsPosts = [
-	{
-		id: 1,
-		category: "Company Updates",
-		date: "May 28, 2026",
-		title: "Ziqora Initiates Feasibility Studies for 5 GW Manufacturing Base in Odisha",
-		desc: "Taking the first technical steps towards securing location sites, outlining solar ecosystem designs, and planning domestic infrastructure partners. This mega-factory represents our commitment to driving India's domestic clean energy capacity to unprecedented levels.",
-		image: "/assets/images/news/news_post_1.png",
-	},
-	{
-		id: 2,
-		category: "Solar Manufacturing",
-		date: "May 15, 2026",
-		title: "How Domestic Wafer Production Protects India's Clean Energy Independence",
-		desc: "Analyzing India's current dependence on component imports, and why building domestic capacity is vital to reaching national solar goals.",
-		image: "/assets/images/news/news_post_2.png",
-	},
-	{
-		id: 3,
-		category: "Policy Updates",
-		date: "May 02, 2026",
-		title: "Odisha Industrial Policies Create Favorable Landscape for Renewable Projects",
-		desc: "Reviewing local state incentives, land procurement processes, and infrastructure support frameworks that benefit green manufacturing.",
-		image: "/assets/images/news/news_post_3.png",
-	},
-	{
-		id: 4,
-		category: "Industry Insights",
-		date: "April 20, 2026",
-		title: "The Shift to N-Type TOPCon Cells: High Efficiency Solar Horizons",
-		desc: "An in-depth look at how N-Type semiconductor technologies are superseding traditional P-Type cells globally.",
-		image: "/assets/images/news/news_post_4.png",
-	},
-	{
-		id: 5,
-		category: "Blogs",
-		date: "April 10, 2026",
-		title: "Securing the Green Grid: A Localized Manufacturing Paradigm",
-		desc: "Exploring how regional factories build supply security and mitigate global shipping emissions by centralizing components fabrication.",
-		image: "/assets/images/news/news_post_5.png",
-	},
-	{
-		id: 6,
-		category: "Company Updates",
-		date: "March 25, 2026",
-		title: "Ziqora Vision Shared at National Solar Assembly",
-		desc: "Our project development leaders discussed the long-term potential of Odisha as an emerging solar manufacturing power base.",
-		image: "/assets/images/news/news_post_6.png",
-	},
-];
-
+import { newsPosts } from "@/data/newsData";
 const categories = [
 	"All",
 	"Company Updates",
@@ -256,7 +206,7 @@ export default function News() {
 															<p style={{ color: "#475569", fontSize: "16px", lineHeight: "1.7", marginBottom: "30px" }}>
 																{featuredPost.desc}
 															</p>
-															<Link href="#" style={{
+															<Link href={`/news/${featuredPost.id}`} style={{
 																display: "inline-flex", alignItems: "center", gap: "8px", color: "#10b981", fontWeight: "700", fontSize: "16px", textDecoration: "none"
 															}}>
 																Read Full Article <i className="fa-solid fa-arrow-right"></i>
@@ -274,57 +224,59 @@ export default function News() {
 									{gridPosts.length > 0 ? (
 										gridPosts.map((post) => (
 											<div key={post.id} className="col-lg-4 col-md-6">
-												<div
-													style={{
-														height: "100%",
-														background: "#ffffff",
-														border: "1px solid #e2e8f0",
-														borderRadius: "20px",
-														overflow: "hidden",
-														display: "flex",
-														flexDirection: "column",
-														transition: "all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)",
-														boxShadow: "0 4px 6px -1px rgba(0,0,0,0.05)",
-														cursor: "pointer"
-													}}
-													className="news-card"
-													onMouseEnter={(e) => {
-														e.currentTarget.style.transform = "translateY(-10px)";
-														e.currentTarget.style.boxShadow = "0 25px 50px -12px rgba(0,0,0,0.15)";
-														e.currentTarget.style.borderColor = "transparent";
-													}}
-													onMouseLeave={(e) => {
-														e.currentTarget.style.transform = "translateY(0)";
-														e.currentTarget.style.boxShadow = "0 4px 6px -1px rgba(0,0,0,0.05)";
-														e.currentTarget.style.borderColor = "#e2e8f0";
-													}}
-												>
-													<div style={{
-														height: "240px",
-														backgroundImage: `url('${post.image}')`,
-														backgroundSize: "cover",
-														backgroundPosition: "center",
-													}}></div>
-													<div style={{ padding: "30px", flexGrow: 1, display: "flex", flexDirection: "column" }}>
-														<div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "15px" }}>
-															<span style={{ fontSize: "12px", fontWeight: "700", color: "#10b981", textTransform: "uppercase" }}>
-																{post.category}
-															</span>
-															<span style={{ fontSize: "13px", color: "#94a3b8", fontWeight: "500" }}>
-																{post.date}
-															</span>
-														</div>
-														<h4 style={{ color: "#0f172a", fontWeight: "800", fontSize: "20px", marginBottom: "15px", lineHeight: "1.4", letterSpacing: "-0.5px" }}>
-															{post.title}
-														</h4>
-														<p style={{ color: "#64748b", fontSize: "15px", lineHeight: "1.6", marginBottom: "25px", flexGrow: 1 }}>
-															{post.desc}
-														</p>
-														<div style={{ color: "#0f172a", fontWeight: "700", fontSize: "14px", display: "inline-flex", alignItems: "center", gap: "5px", marginTop: "auto" }}>
-															Read Article <i className="fa-solid fa-arrow-right" style={{ fontSize: "12px", color: "#10b981" }}></i>
+												<Link href={`/news/${post.id}`} style={{ textDecoration: "none" }}>
+													<div
+														style={{
+															height: "100%",
+															background: "#ffffff",
+															border: "1px solid #e2e8f0",
+															borderRadius: "20px",
+															overflow: "hidden",
+															display: "flex",
+															flexDirection: "column",
+															transition: "all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1)",
+															boxShadow: "0 4px 6px -1px rgba(0,0,0,0.05)",
+															cursor: "pointer"
+														}}
+														className="news-card"
+														onMouseEnter={(e) => {
+															e.currentTarget.style.transform = "translateY(-10px)";
+															e.currentTarget.style.boxShadow = "0 25px 50px -12px rgba(0,0,0,0.15)";
+															e.currentTarget.style.borderColor = "transparent";
+														}}
+														onMouseLeave={(e) => {
+															e.currentTarget.style.transform = "translateY(0)";
+															e.currentTarget.style.boxShadow = "0 4px 6px -1px rgba(0,0,0,0.05)";
+															e.currentTarget.style.borderColor = "#e2e8f0";
+														}}
+													>
+														<div style={{
+															height: "240px",
+															backgroundImage: `url('${post.image}')`,
+															backgroundSize: "cover",
+															backgroundPosition: "center",
+														}}></div>
+														<div style={{ padding: "30px", flexGrow: 1, display: "flex", flexDirection: "column" }}>
+															<div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "15px" }}>
+																<span style={{ fontSize: "12px", fontWeight: "700", color: "#10b981", textTransform: "uppercase" }}>
+																	{post.category}
+																</span>
+																<span style={{ fontSize: "13px", color: "#94a3b8", fontWeight: "500" }}>
+																	{post.date}
+																</span>
+															</div>
+															<h4 style={{ color: "#0f172a", fontWeight: "800", fontSize: "20px", marginBottom: "15px", lineHeight: "1.4", letterSpacing: "-0.5px" }}>
+																{post.title}
+															</h4>
+															<p style={{ color: "#64748b", fontSize: "15px", lineHeight: "1.6", marginBottom: "25px", flexGrow: 1 }}>
+																{post.desc}
+															</p>
+															<div style={{ color: "#0f172a", fontWeight: "700", fontSize: "14px", display: "inline-flex", alignItems: "center", gap: "5px", marginTop: "auto" }}>
+																Read Article <i className="fa-solid fa-arrow-right" style={{ fontSize: "12px", color: "#10b981" }}></i>
+															</div>
 														</div>
 													</div>
-												</div>
+												</Link>
 											</div>
 										))
 									) : (

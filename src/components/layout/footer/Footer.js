@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 
 const Footer = () => {
 	const greenAccent = "#10b981";
+	const [subscribed, setSubscribed] = useState(false);
 
 	return (
 		<footer
@@ -58,8 +60,11 @@ const Footer = () => {
 									<li style={{ marginBottom: "12px" }}>
 										<Link href="/news" style={{ color: "rgba(255, 255, 255, 0.75)" }}>News & Insights</Link>
 									</li>
-									<li>
+									<li style={{ marginBottom: "12px" }}>
 										<Link href="/contact" style={{ color: "rgba(255, 255, 255, 0.75)" }}>Contact</Link>
+									</li>
+									<li>
+										<Link href="/privacy-policy" style={{ color: "rgba(255, 255, 255, 0.75)" }}>Privacy Policy</Link>
 									</li>
 								</ul>
 							</div>
@@ -75,36 +80,45 @@ const Footer = () => {
 									Subscribe to receive updates on our project development milestones.
 								</p>
 								<div className="subscribe-form">
-									<form action="#" onSubmit={(e) => e.preventDefault()}>
-										<div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
-											<input
-												type="email"
-												name="email"
-												placeholder="Enter email address"
-												required
-												style={{
-													background: "rgba(255, 255, 255, 0.05)",
-													border: "1px solid rgba(255, 255, 255, 0.1)",
-													color: "#ffffff",
-													borderRadius: "6px",
-													padding: "12px 15px",
-													width: "100%",
-												}}
-											/>
-											<button
-												type="submit"
-												style={{
-													background: "#10b981",
-													color: "#ffffff",
-													borderRadius: "6px",
-													padding: "0 20px",
-													cursor: "pointer",
-												}}
-											>
-												<i className="fa-solid fa-paper-plane"></i>
-											</button>
+									{subscribed ? (
+										<div style={{ background: "rgba(16, 185, 129, 0.1)", border: "1px solid rgba(16, 185, 129, 0.2)", borderRadius: "6px", padding: "12px 15px", display: "flex", alignItems: "center", gap: "10px" }}>
+											<i className="fa-solid fa-check-circle" style={{ color: "#10b981" }}></i>
+											<p style={{ margin: 0, color: "#10b981", fontSize: "14px", fontWeight: "600" }}>Thank you for subscribing!</p>
 										</div>
-									</form>
+									) : (
+										<form onSubmit={(e) => { e.preventDefault(); setSubscribed(true); }}>
+											<div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
+												<input
+													type="email"
+													name="email"
+													placeholder="Enter email address"
+													required
+													style={{
+														background: "rgba(255, 255, 255, 0.05)",
+														border: "1px solid rgba(255, 255, 255, 0.1)",
+														color: "#ffffff",
+														borderRadius: "6px",
+														padding: "12px 15px",
+														width: "100%",
+														outline: "none",
+													}}
+												/>
+												<button
+													type="submit"
+													style={{
+														background: "#10b981",
+														color: "#ffffff",
+														borderRadius: "6px",
+														padding: "0 20px",
+														cursor: "pointer",
+														border: "none",
+													}}
+												>
+													<i className="fa-solid fa-paper-plane"></i>
+												</button>
+											</div>
+										</form>
+									)}
 								</div>
 							</div>
 						</div>
@@ -127,11 +141,11 @@ const Footer = () => {
 							<div className="footer-contact">
 								<ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", gap: "25px", flexWrap: "wrap" }}>
 									<li>
-										<Link href="mailto:info@ziqora.com" style={{ color: "rgba(255,255,255,0.7)" }}>
+										<Link href="mailto:info@ziqora.energy" style={{ color: "rgba(255,255,255,0.7)" }}>
 											<span className="icon" style={{ color: "#10b981", marginRight: "8px" }}>
 												<i className="fa-solid fa-envelope"></i>
 											</span>
-											info@ziqora.com
+											info@ziqora.energy
 										</Link>
 									</li>
 									<li>
@@ -149,7 +163,7 @@ const Footer = () => {
 						<div className="col-md-6 d-flex justify-content-md-end align-items-center gap-3">
 							{/* Social Links */}
 							<div className="social-links" style={{ display: "inline-flex", gap: "15px" }}>
-								<Link href="https://www.linkedin.com/" target="_blank" style={{ color: "rgba(255, 255, 255, 0.6)", fontSize: "18px" }}>
+								<Link href="https://www.linkedin.com/company/ziqora" target="_blank" style={{ color: "rgba(255, 255, 255, 0.6)", fontSize: "18px" }}>
 									<i className="fa-brands fa-linkedin"></i>
 								</Link>
 								<Link href="https://www.youtube.com/" target="_blank" style={{ color: "rgba(255, 255, 255, 0.6)", fontSize: "18px" }}>

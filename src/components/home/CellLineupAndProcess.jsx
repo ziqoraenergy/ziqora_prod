@@ -314,7 +314,7 @@ const CellLineupAndProcess = () => {
 									Contact Partnership Desk
 								</Link>
 								<a
-									href="mailto:partnerships@ziqora.com"
+									href="mailto:partnerships@ziqora.energy"
 									style={{
 										border: "1px solid rgba(255,255,255,0.3)",
 										padding: "14px 30px",
