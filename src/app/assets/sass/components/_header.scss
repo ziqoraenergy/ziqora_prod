@@ -793,12 +793,13 @@ START: Theme Header CSS
 	max-width: 1600px;
 	z-index: 1050;
 	border-radius: 20px;
-	background-color: rgba(12, 25, 48, 0.42);
-	backdrop-filter: blur(18px);
-	-webkit-backdrop-filter: blur(18px);
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	background-color: rgba(255, 255, 255, 0.75);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	border: 1px solid rgba(255, 255, 255, 0.6);
 	padding: 0 28px;
 	height: 84px;
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 	/* GSAP will animate height, background, blur, and shadow */
 
 	@media #{$md, $sm, $xs} {
@@ -830,7 +831,7 @@ START: Theme Header CSS
 			display: flex;
 			align-items: center;
 			.logo span {
-				color: var(--tj-color-common-white); /* Dark/light toggle can be managed via JS or sticky class */
+				color: var(--tj-color-heading-primary); /* Dark/light toggle can be managed via JS or sticky class */
 			}
 			img, svg {
 				height: 42px;
@@ -861,7 +862,7 @@ START: Theme Header CSS
 					position: relative;
 					
 					> a {
-						color: var(--tj-color-common-white);
+						color: var(--tj-color-heading-primary);
 						font-size: 16px;
 						font-weight: 500;
 						text-decoration: none;
@@ -913,10 +914,10 @@ START: Theme Header CSS
 						top: 100%;
 						left: 0;
 						min-width: 240px;
-						background-color: rgba(12, 25, 48, 0.85);
+						background-color: rgba(255, 255, 255, 0.98);
 						backdrop-filter: blur(18px);
 						-webkit-backdrop-filter: blur(18px);
-						border: 1px solid rgba(255, 255, 255, 0.08);
+						border: 1px solid rgba(0, 0, 0, 0.08);
 						padding: 15px 0;
 						margin: 0;
 						list-style: none;
@@ -930,7 +931,7 @@ START: Theme Header CSS
 
 						li {
 							a {
-								color: rgba(255, 255, 255, 0.85);
+								color: var(--tj-color-heading-primary);
 								padding: 10px 25px;
 								display: block;
 								font-size: 15px;
@@ -940,7 +941,7 @@ START: Theme Header CSS
 								&:hover {
 									color: var(--tj-color-theme-primary);
 									padding-left: 32px;
-									background-color: rgba(255, 255, 255, 0.05);
+									background-color: rgba(0, 0, 0, 0.03);
 								}
 							}
 						}
@@ -966,7 +967,7 @@ START: Theme Header CSS
 			button {
 				background: none;
 				border: none;
-				color: var(--tj-color-common-white);
+				color: var(--tj-color-heading-primary);
 				font-size: 20px;
 				cursor: pointer;
 				padding: 0;
