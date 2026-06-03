@@ -16,7 +16,7 @@ export default function ArticlePage({ params }) {
 		// Next.js App Router params resolution
 		const fetchArticle = async () => {
 			const resolvedParams = await params;
-			const foundArticle = newsPosts.find((p) => p.id === parseInt(resolvedParams.id));
+			const foundArticle = newsPosts.find((p) => p.slug === resolvedParams.slug);
 			setArticle(foundArticle);
 			setLoading(false);
 		};

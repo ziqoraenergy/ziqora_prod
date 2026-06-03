@@ -1,6 +1,7 @@
 export const newsPosts = [
 	{
 		id: 1,
+		slug: "ziqora-initiates-feasibility-studies",
 		category: "Company Updates",
 		date: "May 28, 2026",
 		title: "Ziqora Initiates Feasibility Studies for 5 GW Manufacturing Base in Odisha",
@@ -18,6 +19,7 @@ export const newsPosts = [
 	},
 	{
 		id: 2,
+		slug: "domestic-wafer-production-protects-india",
 		category: "Solar Manufacturing",
 		date: "May 15, 2026",
 		title: "How Domestic Wafer Production Protects India's Clean Energy Independence",
@@ -35,6 +37,7 @@ export const newsPosts = [
 	},
 	{
 		id: 3,
+		slug: "odisha-industrial-policies-favorable-landscape",
 		category: "Policy Updates",
 		date: "May 02, 2026",
 		title: "Odisha Industrial Policies Create Favorable Landscape for Renewable Projects",
@@ -52,6 +55,7 @@ export const newsPosts = [
 	},
 	{
 		id: 4,
+		slug: "shift-to-n-type-topcon-cells",
 		category: "Industry Insights",
 		date: "April 20, 2026",
 		title: "The Shift to N-Type TOPCon Cells: High Efficiency Solar Horizons",
@@ -69,6 +73,7 @@ export const newsPosts = [
 	},
 	{
 		id: 5,
+		slug: "securing-the-green-grid-localized-manufacturing",
 		category: "Blogs",
 		date: "April 10, 2026",
 		title: "Securing the Green Grid: A Localized Manufacturing Paradigm",
@@ -86,6 +91,7 @@ export const newsPosts = [
 	},
 	{
 		id: 6,
+		slug: "ziqora-vision-shared-at-national-solar-assembly",
 		category: "Company Updates",
 		date: "March 25, 2026",
 		title: "Ziqora Vision Shared at National Solar Assembly",

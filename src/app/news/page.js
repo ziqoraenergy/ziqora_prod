@@ -206,7 +206,7 @@ export default function News() {
 															<p style={{ color: "#475569", fontSize: "16px", lineHeight: "1.7", marginBottom: "30px" }}>
 																{featuredPost.desc}
 															</p>
-															<Link href={`/news/${featuredPost.id}`} style={{
+															<Link href={`/news/${featuredPost.slug}`} style={{
 																display: "inline-flex", alignItems: "center", gap: "8px", color: "#10b981", fontWeight: "700", fontSize: "16px", textDecoration: "none"
 															}}>
 																Read Full Article <i className="fa-solid fa-arrow-right"></i>
@@ -224,7 +224,7 @@ export default function News() {
 									{gridPosts.length > 0 ? (
 										gridPosts.map((post) => (
 											<div key={post.id} className="col-lg-4 col-md-6">
-												<Link href={`/news/${post.id}`} style={{ textDecoration: "none" }}>
+												<Link href={`/news/${post.slug}`} style={{ textDecoration: "none" }}>
 													<div
 														style={{
 															height: "100%",
