@@ -6,6 +6,36 @@ import { useState } from "react";
 const Footer = () => {
 	const greenAccent = "#10b981";
 	const [subscribed, setSubscribed] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
+	const [error, setError] = useState(null);
+
+	const handleSubscribe = async (e) => {
+		e.preventDefault();
+		const email = e.target.email.value;
+		
+		setIsLoading(true);
+		setError(null);
+		
+		try {
+			const res = await fetch("/api/subscribe", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ email }),
+			});
+			
+			const data = await res.json();
+			
+			if (!res.ok) {
+				throw new Error(data.error || "Failed to subscribe");
+			}
+			
+			setSubscribed(true);
+		} catch (err) {
+			setError(err.message);
+		} finally {
+			setIsLoading(false);
+		}
+	};
 
 	return (
 		<footer
@@ -86,13 +116,14 @@ const Footer = () => {
 											<p style={{ margin: 0, color: "#10b981", fontSize: "14px", fontWeight: "600" }}>Thank you for subscribing!</p>
 										</div>
 									) : (
-										<form onSubmit={(e) => { e.preventDefault(); setSubscribed(true); }}>
-											<div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
+										<form onSubmit={handleSubscribe}>
+											<div style={{ display: "flex", gap: "10px", marginBottom: "5px" }}>
 												<input
 													type="email"
 													name="email"
 													placeholder="Enter email address"
 													required
+													disabled={isLoading}
 													style={{
 														background: "rgba(255, 255, 255, 0.05)",
 														border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -101,22 +132,34 @@ const Footer = () => {
 														padding: "12px 15px",
 														width: "100%",
 														outline: "none",
+														opacity: isLoading ? 0.7 : 1,
 													}}
 												/>
 												<button
 													type="submit"
+													disabled={isLoading}
 													style={{
 														background: "#10b981",
 														color: "#ffffff",
 														borderRadius: "6px",
 														padding: "0 20px",
-														cursor: "pointer",
+														cursor: isLoading ? "not-allowed" : "pointer",
 														border: "none",
+														opacity: isLoading ? 0.7 : 1,
 													}}
 												>
-													<i className="fa-solid fa-paper-plane"></i>
+													{isLoading ? (
+														<i className="fa-solid fa-spinner fa-spin"></i>
+													) : (
+														<i className="fa-solid fa-paper-plane"></i>
+													)}
 												</button>
 											</div>
+											{error && (
+												<p style={{ color: "#ef4444", fontSize: "13px", marginTop: "5px", marginBottom: "0" }}>
+													{error}
+												</p>
+											)}
 										</form>
 									)}
 								</div>
