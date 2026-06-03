@@ -33,13 +33,13 @@ const headingFont = Mona_Sans({
 
 export const metadata = {
 	title: {
-		default: "Ziqora - Powering India's Solar Manufacturing Future",
+		default: "Ziqora - Powering India's Silicon Wafer & Solar Cell Future",
 		template: "%s | Ziqora"
 	},
 	description: "Ziqora is establishing 5 GW of wafer and solar cell capacity in Odisha, India, building the foundation of India's solar future.",
 	keywords: ["Solar", "Wafer", "Solar Cell", "Manufacturing", "Renewable Energy", "India", "Ziqora"],
 	openGraph: {
-		title: "Ziqora - Powering India's Solar Manufacturing Future",
+		title: "Ziqora - Powering India's Silicon Wafer & Solar Cell Future",
 		description: "Ziqora is establishing 5 GW of wafer and solar cell capacity in Odisha, India.",
 		url: "https://ziqora.energy",
 		siteName: "Ziqora Energy",
