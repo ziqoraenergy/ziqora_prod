@@ -34,6 +34,15 @@ const headingFont = Mona_Sans({
 export const metadata = {
 	title: "Ziqora - Wafer and Solar Cell Manufacturing Company",
 	description: "Ziqora - Wafer and Solar Cell Manufacturing Company",
+	icons: {
+		icon: [
+			{ url: '/images/favicon_io/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+			{ url: '/images/favicon_io/favicon-16x16.png', sizes: '16x16', type: 'image/png' }
+		],
+		shortcut: '/images/favicon_io/favicon.ico',
+		apple: '/images/favicon_io/apple-touch-icon.png',
+	},
+	manifest: '/images/favicon_io/site.webmanifest',
 };
 
 export default function RootLayout({ children }) {
