@@ -8,10 +8,44 @@ import { useState, useEffect } from "react";
 
 export default function Partner() {
 	const [formSubmitted, setFormSubmitted] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [formData, setFormData] = useState({
+		fullName: "",
+		businessEmail: "",
+		companyName: "",
+		phoneNumber: "",
+		partnershipType: "",
+		proposalDetails: ""
+	});
 
-	const handleSubmit = (e) => {
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormData(prev => ({ ...prev, [name]: value }));
+	};
+
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		setFormSubmitted(true);
+		setIsSubmitting(true);
+		
+		try {
+			const res = await fetch('/api/partner', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData)
+			});
+			
+			if (res.ok) {
+				setFormSubmitted(true);
+			} else {
+				const data = await res.json();
+				alert(data.error || "Failed to submit proposal. Please try again.");
+			}
+		} catch (error) {
+			console.error(error);
+			alert("An error occurred. Please try again later.");
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	useEffect(() => {
@@ -273,23 +307,23 @@ export default function Partner() {
 													<div className="row g-4">
 														<div className="col-md-6">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Full Name <span style={{ color: "#10b981" }}>*</span></label>
-															<input type="text" placeholder="John Doe" required className="ziqora-input" />
+															<input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="John Doe" required className="ziqora-input" />
 														</div>
 														<div className="col-md-6">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Business Email <span style={{ color: "#10b981" }}>*</span></label>
-															<input type="email" placeholder="john@company.com" required className="ziqora-input" />
+															<input type="email" name="businessEmail" value={formData.businessEmail} onChange={handleChange} placeholder="john@company.com" required className="ziqora-input" />
 														</div>
 														<div className="col-md-6">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Company Name <span style={{ color: "#10b981" }}>*</span></label>
-															<input type="text" placeholder="Company Ltd." required className="ziqora-input" />
+															<input type="text" name="companyName" value={formData.companyName} onChange={handleChange} placeholder="Company Ltd." required className="ziqora-input" />
 														</div>
 														<div className="col-md-6">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Phone Number</label>
-															<input type="tel" placeholder="+91 XXXXX XXXXX" className="ziqora-input" />
+															<input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="+91 XXXXX XXXXX" className="ziqora-input" />
 														</div>
 														<div className="col-sm-12">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Partnership Type <span style={{ color: "#10b981" }}>*</span></label>
-															<select required defaultValue="" className="ziqora-input" style={{ cursor: "pointer" }}>
+															<select name="partnershipType" value={formData.partnershipType} onChange={handleChange} required className="ziqora-input" style={{ cursor: "pointer" }}>
 																<option value="" disabled style={{ color: "#666" }}>Select partnership area...</option>
 																<option value="raw-material" style={{ background: "#0f172a", color: "#fff" }}>Raw Material Sourcing (Polysilicon)</option>
 																<option value="off-take" style={{ background: "#0f172a", color: "#fff" }}>Off-Take Agreement (Wafers/Cells)</option>
@@ -300,17 +334,17 @@ export default function Partner() {
 														</div>
 														<div className="col-sm-12">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Proposal Details <span style={{ color: "#10b981" }}>*</span></label>
-															<textarea placeholder="Please describe your requirements, expected volumes, or partnership proposal..." required className="ziqora-input" style={{ minHeight: "150px", resize: "vertical" }}></textarea>
+															<textarea name="proposalDetails" value={formData.proposalDetails} onChange={handleChange} placeholder="Please describe your requirements, expected volumes, or partnership proposal..." required className="ziqora-input" style={{ minHeight: "150px", resize: "vertical" }}></textarea>
 														</div>
 														<div className="col-sm-12 mt-4">
-															<button type="submit" style={{
-																width: "100%", background: "#10b981", color: "#fff", border: "none", padding: "16px 32px",
-																borderRadius: "12px", fontWeight: "700", fontSize: "16px", cursor: "pointer", transition: "all 0.3s"
+															<button type="submit" disabled={isSubmitting} style={{
+																width: "100%", background: isSubmitting ? "#64748b" : "#10b981", color: "#fff", border: "none", padding: "16px 32px",
+																borderRadius: "12px", fontWeight: "700", fontSize: "16px", cursor: isSubmitting ? "not-allowed" : "pointer", transition: "all 0.3s"
 															}}
-															onMouseEnter={(e) => e.target.style.background = "#0ea5e9"}
-															onMouseLeave={(e) => e.target.style.background = "#10b981"}
+															onMouseEnter={(e) => { if(!isSubmitting) e.target.style.background = "#0ea5e9"; }}
+															onMouseLeave={(e) => { if(!isSubmitting) e.target.style.background = "#10b981"; }}
 															>
-																Submit Partnership Proposal <i className="fa-solid fa-paper-plane ms-2"></i>
+																{isSubmitting ? "Sending Proposal..." : "Submit Partnership Proposal"} {isSubmitting ? <i className="fa-solid fa-spinner fa-spin ms-2"></i> : <i className="fa-solid fa-paper-plane ms-2"></i>}
 															</button>
 														</div>
 													</div>

@@ -8,10 +8,44 @@ import { useState, useEffect } from "react";
 
 export default function Contact() {
 	const [formSubmitted, setFormSubmitted] = useState(false);
+	const [isSubmitting, setIsSubmitting] = useState(false);
+	const [formData, setFormData] = useState({
+		fullName: "",
+		businessEmail: "",
+		companyName: "",
+		phoneNumber: "",
+		subject: "",
+		projectDetails: ""
+	});
 
-	const handleSubmit = (e) => {
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setFormData(prev => ({ ...prev, [name]: value }));
+	};
+
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		setFormSubmitted(true);
+		setIsSubmitting(true);
+		
+		try {
+			const res = await fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify(formData)
+			});
+			
+			if (res.ok) {
+				setFormSubmitted(true);
+			} else {
+				const data = await res.json();
+				alert(data.error || "Failed to submit inquiry. Please try again.");
+			}
+		} catch (error) {
+			console.error(error);
+			alert("An error occurred. Please try again later.");
+		} finally {
+			setIsSubmitting(false);
+		}
 	};
 
 	useEffect(() => {
@@ -205,31 +239,31 @@ export default function Contact() {
 													<div className="row g-4">
 														<div className="col-sm-6">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Full Name <span style={{ color: "#10b981" }}>*</span></label>
-															<input type="text" placeholder="John Doe" required className="ziqora-input" />
+															<input type="text" name="fullName" value={formData.fullName} onChange={handleChange} placeholder="John Doe" required className="ziqora-input" />
 														</div>
 														<div className="col-sm-6">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Business Email <span style={{ color: "#10b981" }}>*</span></label>
-															<input type="email" placeholder="john@company.com" required className="ziqora-input" />
+															<input type="email" name="businessEmail" value={formData.businessEmail} onChange={handleChange} placeholder="john@company.com" required className="ziqora-input" />
 														</div>
 														<div className="col-sm-6">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Company Name <span style={{ color: "#10b981" }}>*</span></label>
-															<input type="text" placeholder="e.g. Ziqora Corp" required className="ziqora-input" />
+															<input type="text" name="companyName" value={formData.companyName} onChange={handleChange} placeholder="e.g. Ziqora Corp" required className="ziqora-input" />
 														</div>
 														<div className="col-sm-6">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Phone Number</label>
-															<input type="tel" placeholder="+91 XXXXX XXXXX" className="ziqora-input" />
+															<input type="tel" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="+91 XXXXX XXXXX" className="ziqora-input" />
 														</div>
 														<div className="col-sm-12">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Subject <span style={{ color: "#10b981" }}>*</span></label>
-															<input type="text" placeholder="Subject of your message" required className="ziqora-input" />
+															<input type="text" name="subject" value={formData.subject} onChange={handleChange} placeholder="Subject of your message" required className="ziqora-input" />
 														</div>
 														<div className="col-sm-12">
 															<label style={{ display: "block", color: "rgba(255,255,255,0.8)", fontSize: "14px", fontWeight: "600", marginBottom: "8px" }}>Project Details & Requirements <span style={{ color: "#10b981" }}>*</span></label>
-															<textarea placeholder="Please describe your requirements, expected volumes, or partnership proposal..." required className="ziqora-input" style={{ minHeight: "150px", resize: "vertical" }}></textarea>
+															<textarea name="projectDetails" value={formData.projectDetails} onChange={handleChange} placeholder="Please describe your requirements, expected volumes, or partnership proposal..." required className="ziqora-input" style={{ minHeight: "150px", resize: "vertical" }}></textarea>
 														</div>
 														<div className="col-sm-12 mt-4">
-															<button type="submit" className="ziqora-submit-btn" style={{ width: "100%", justifyContent: "center", padding: "18px" }}>
-																Submit Business Inquiry <i className="fa-solid fa-paper-plane" style={{ marginLeft: "10px", fontSize: "15px" }}></i>
+															<button type="submit" disabled={isSubmitting} className="ziqora-submit-btn" style={{ width: "100%", justifyContent: "center", padding: "18px", opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? "not-allowed" : "pointer" }}>
+																{isSubmitting ? "Sending Inquiry..." : "Submit Business Inquiry"} {isSubmitting ? <i className="fa-solid fa-spinner fa-spin" style={{ marginLeft: "10px", fontSize: "15px" }}></i> : <i className="fa-solid fa-paper-plane" style={{ marginLeft: "10px", fontSize: "15px" }}></i>}
 															</button>
 														</div>
 													</div>
