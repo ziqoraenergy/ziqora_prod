@@ -12,7 +12,7 @@ const initSmoothScroller = contanerRef => {
 			wrapper: "#smooth-wrapper",
 			smooth: 1.5,
 			effects: true,
-			smoothTouch: 0.1,
+			smoothTouch: false,
 			ignoreMobileResize: true,
 		});
 	}

@@ -92,18 +92,13 @@
 		"submenu": [
 			{
 				"id": 1,
-				"name": "Our Commitment",
-				"path": "/sustainability#commitment"
+				"name": "ESG Roadmap",
+				"path": "/sustainability"
 			},
 			{
 				"id": 2,
-				"name": "ESG Roadmap",
-				"path": "/sustainability#esg-roadmap"
-			},
-			{
-				"id": 3,
-				"name": "Community Impact",
-				"path": "/sustainability#community-impact"
+				"name": "Environmental Responsibility",
+				"path": "/environmental-responsibility"
 			}
 		]
 	},

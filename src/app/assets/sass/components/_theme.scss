@@ -516,11 +516,7 @@ img {
 	border-radius: 12px;
 }
 #smooth-content {
-	padding-bottom: 15px;
 	will-change: transform;
-	@media #{$sm, $xs} {
-		padding-bottom: 0;
-	}
 }
 .tj-sticky-panel,
 .tj-sticky-panel-2,

@@ -56,7 +56,7 @@ const Header = () => {
 									<Link href="/sustainability">Sustainability</Link>
 									<ul className="sub-menu">
 										<li><Link href="/sustainability">ESG</Link></li>
-										<li><Link href="/sustainability#environment">Environmental Responsibility</Link></li>
+										<li><Link href="/environmental-responsibility">Environmental Responsibility</Link></li>
 									</ul>
 								</li>
 								<li><Link href="/news">News & Insights</Link></li>
