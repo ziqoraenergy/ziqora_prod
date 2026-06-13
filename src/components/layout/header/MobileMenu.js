@@ -23,8 +23,8 @@ const MobileMenu = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 					<div className="hamburger_inner">
 						<div className="hamburger_top d-flex align-items-center justify-content-between">
 							<div className="hamburger_logo">
-								<Link href="/" style={{ display: "inline-flex", alignItems: "center" }}>
-									<img src="/images/logo/ziqora-light.png" alt="Ziqora Logo" style={{ height: "45px", width: "auto" }} />
+								<Link href="/" style={{ display: "inline-flex", alignItems: "center", maxWidth: "none" }}>
+									<img src="/images/logo/ziqora-light.png" alt="Ziqora Logo" style={{ height: "45px", width: "auto", objectFit: "contain" }} />
 								</Link>
 							</div>
 							<div className="hamburger_close">
